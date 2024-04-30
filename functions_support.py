@@ -27,23 +27,6 @@ def interval_offset(interval):
     else:
         return pd.DateOffset(minutes=0)
 
-#def calculates_ema(price, days, smoothing, ema):
-#    """
-#    Calculates Exponential Moving Average (EMA) based on the given parameters.
-#
-#    Args:
-#        price (float): Current price.
-#        days (int): Number of days for EMA calculation.
-#        smoothing (float): Smoothing factor.
-#        ema (list): List of previous EMA values.
-#
-#    Returns:
-#        float: Calculated EMA value.
-#    """
-#    x = (smoothing / (1 + days))    
-#     ema = (price * x) + (ema[-1] * (1 - x))
-#    return ema
-
 def calculates_ema(close, period, smoothing, ema_list):
     """
     Calculate Exponential Moving Average.
